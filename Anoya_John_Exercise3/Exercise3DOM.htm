@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 3 using DOM</title>
+    <style>
+        #canvas {
+            position: absolute;
+            background-color: #3d3d3d;
+            width: 600px;
+            height: 300px;
+             border: 3px solid whitesmoke;
+        }
+
+        h1{
+            color: whitesmoke;
+        }
+
+        body{ 
+            background-color: #1f1f1f;       
+        }
+    </style>
+</head>
+<body>
+    <h1 id = "Title">DOM DEMO</h1>
+    <img src = "3DSMaxSword.svg" alt = "Picture of a sword I made in 3DSMax" style = "width: 25%; height: 25%; position:relative; left: 50px; border: 5px solid whitesmoke" id = "SwordImage">
+    <h1 id = "Info">Click the Canvas to Invert the Colours and change up the animation!</h1>
+    <canvas id="canvas" width="600" height="300">
+        Alternate content here, for accessibility.
+    </canvas>
+    <script>
+        var canvas = document.getElementById("canvas");
+        if (canvas.getContext('2d')) {
+            var context = canvas.getContext("2d");
+        }
+
+        function Rectangle (color_, x_, y_, dx_, dy_, w_, h_) {
+            // create the properties of our Rectangle constructor
+            this.x = x_;
+            this.y = y_;
+            this.w = w_;
+            this.h = h_;
+            this.dx = dx_;
+            this.dy = dy_;
+
+            this.ChangeSize = function(newSizeX_, newSizeY_){
+                this.w = newSizeX_;
+                this.h = newSizeY_;
+            }
+
+            this.ChangeDirection = function(newDirX_, newDirY_){
+                this.dx = newDirX_;
+                this.dy = newDirY_;
+            }
+
+            this.ChangeColour = function(newColour_){
+                color_ = newColour_;
+            }
+            // create the methods of our Rectangle constructor
+            this.draw = function(context) {
+                context.fillStyle = color_;
+                context.fillRect(
+                this.x, this.y,
+                this.w, this.h
+                )
+            };
+
+            var img = new Image();
+
+            this.update = function() {
+                // update the position of the rectangle
+                this.x += this.dx;
+                this.y += this.dy;
+
+               
+                context.drawImage(img, this.x, this.y, this.w, this.h);
+                img.src = "HumberLogo.png";
+
+                // these rectangles will bounce when they reach the edges of the canvas
+                if (this.y + this.h > canvas.height) {
+                    this.dy = -2;
+                }
+                else if (this.y <= 0) {
+                    this.dy = +2;
+                }
+                if (this.x + this.w > canvas.width) {
+                    this.dx = -2;
+                }
+                else if (this.x <= 0) {
+                    this.dx = +2;
+                }
+            };
+        }
+
+        let ImageRectangle = new Rectangle("rgb(255,255,255)", 22, 150, 2, 2, 100, 100);
+        let ImageRectangle2 = new Rectangle("rgb(255,255,255)", 0, 0, 2, 2, 100, 100);
+        function myFrame(timestamp) {
+            // Clear the previous drawing
+            context.clearRect(0,0,canvas.width, canvas.height);
+      
+            ImageRectangle.draw(context);
+            ImageRectangle2.draw(context);
+
+            ImageRectangle.update();
+            ImageRectangle2.update();
+
+            // Reanimate again
+            window.requestAnimationFrame(myFrame);
+        }
+         // Start the animation
+        myFrame();
+
+        var isViewingImage = false; 
+        function TweenImageSize(event){
+            //SOURCE USED FOR IMAGE TWEENING REFERENCE
+            //https://www.geeksforgeeks.org/how-to-make-the-images-bigger-when-clicked/
+            var target = event.target; 
+
+            if(!isViewingImage){
+                isViewingImage = true; 
+                target.style.transform = "scale(1.1, 1.1)";
+                target.style.transition = "transform 0.25s linear";
+            }
+
+            else { 
+                isViewingImage = false; 
+                target.style.transform = "scale(1.0, 1.0)";
+                target.style.transition = "transform 0.35s linear";
+            }          
+        }
+
+        function changeToPointCursor(event){         
+            var target = event.target; 
+            target.style.cursor = "pointer"; 
+        }
+
+        function changeToDefaultCursor(event){        
+            var target = event.target; 
+            target.style.cursor = "default";            
+        }
+
+        var isColourInverted = false; 
+        function changeCanvasColour(event){
+            var target = event.target; 
+            
+            if(!isColourInverted){
+                isColourInverted = true; 
+                target.style = "background-color: Whitesmoke; border: 3px solid #3d3d3d";
+                ImageRectangle.ChangeColour("rgb(96,96,96)");
+                ImageRectangle2.ChangeColour("rgb(96,96,96)");
+                ImageRectangle.ChangeSize(50, 50);
+                ImageRectangle.ChangeDirection(0, 2);
+                ImageRectangle2.ChangeSize(50, 50);
+                ImageRectangle2.ChangeDirection(2, 0);
+            }
+
+            else { 
+                isColourInverted = false; 
+                target.style = "background-color: #3d3d3d; border: 3px solid Whitesmoke";
+                ImageRectangle.ChangeColour("rgb(255,255,255)");
+                ImageRectangle2.ChangeColour("rgb(255,255,255)");
+                ImageRectangle.ChangeSize(100, 100);
+                ImageRectangle.ChangeDirection(2, 2);
+                ImageRectangle2.ChangeSize(100, 100);
+                ImageRectangle2.ChangeDirection(2, 2);
+            }
+        }
+
+        canvas.addEventListener("mouseup", changeCanvasColour);
+
+        var SwordImageElement = document.getElementById("SwordImage");
+        SwordImageElement.addEventListener("mouseenter", changeToPointCursor);
+        SwordImageElement.addEventListener("mouseleave", changeToDefaultCursor);
+        SwordImageElement.addEventListener("mouseenter", TweenImageSize);
+        SwordImageElement.addEventListener("mouseleave", TweenImageSize);
+     
+    </script>
+</body>
+</html>
