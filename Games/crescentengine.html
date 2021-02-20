@@ -205,6 +205,7 @@
         var dots = document.getElementsByClassName("dot");
         var vid = document.getElementById("video");
         if(slideIndex > 1) { vid.style.display = "none"}
+        else {vid.style.display = "initial"}
         if (n > slides.length) {slideIndex = 1}
         if (n < 1) {slideIndex = slides.length}
         for (i = 0; i < slides.length; i++) {
