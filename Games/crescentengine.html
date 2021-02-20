@@ -152,11 +152,13 @@
     </header>
 
     <h2>Crescent Engine</h2>
+
     <!-- Slideshow container -->
     <div class="slideshow-container">
-        <iframe width= "750" height="500" style="display: none;"
+        <iframe width= "750" height="500" id = "video"
         src="https://www.youtube.com/embed/WfL2B9WcOO0">
         </iframe> 
+        
         <div class="mySlides fade">
     </div>
   
@@ -201,6 +203,8 @@
         var i;
         var slides = document.getElementsByClassName("mySlides");
         var dots = document.getElementsByClassName("dot");
+        var vid = document.getElementById("video");
+        if(slideIndex > 1) { vid.style.display = "none"}
         if (n > slides.length) {slideIndex = 1}
         if (n < 1) {slideIndex = slides.length}
         for (i = 0; i < slides.length; i++) {
