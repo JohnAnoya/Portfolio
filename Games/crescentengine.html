@@ -215,7 +215,7 @@
         slides[slideIndex-1].style.display = "block";
         dots[slideIndex-1].className += " active";
 
-        if(slideIndex > 1) { vid.style.display = "none"}
+        if(slideIndex > 1) { vid.style.display = "none"; vid.querySelector('video').pause();}
         else {vid.style.display = "initial"}
     }
   </script>
