@@ -4,6 +4,7 @@
     <title>Portfolio</title>
     <script src="jquery-3.5.1.min.js"></script>
     <style>
+       /* Add a black background color to the top navigation */
         .topnav {
             padding: 25px;
             background-color: #333;
@@ -133,7 +134,7 @@
 </head>
 <body>
     <header>
-        <h1>ABOUT</h1>
+        <h1>CONTACTS</h1>
         <nav>
             <ul class="topnav">
                 <li><a href = "index.html">About</a></li>
@@ -144,27 +145,12 @@
         </nav>
     </header>
 
-    <img src = "Pictures/AboutMe/PictureOfMyself.png" alt = "Picture of Me" style="border: 5px solid whitesmoke;">
-
-    <div style="white-space: pre; color:whitesmoke; font-size: 20px;">
-        Hey there! My name is John, and I am a gameplay programmer from Toronto, Ontario. 
-        I have been making games ever since I was 14 and published my first successful game on Roblox when I was 17. 
-        I am currently pursuing an advanced diploma at Humber college studying Game Programming under the faculty 
-        of Media & Creative Arts. 
-
-        Throughout my portfolio you will be able to see projects that I’ve personally worked on for school, alongside some of my side projects. 
-        I have a huge passion for learning so I often find myself constantly trying to learn new things that are often challenging, 
-        while also continuing to strengthen my current technical abilities. 
-        
-        My newest hobby is to make small websites (like this one :D) using HTML, CSS, and JavaScript.           
-    </div>
-
     <div class = "loader-wrapper"> 
         <span class="loader"><span class="loader-inner"></span></span>
-    </div>
-
+        </div>
+    
     <script>
-        $(window).on("load",function(){
+       $(window).on("load",function(){
             $(".loader-wrapper").fadeOut("slow");
         });
     </script>
