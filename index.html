@@ -7,6 +7,11 @@
         .topnav {
             background-color: #333;
             overflow: hidden;
+            float: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }   
         
         .topnav li {
@@ -33,11 +38,7 @@
         }
 
         .topnav-centered a {
-            float: none;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        
         }
 
         .loader-wrapper {
@@ -134,7 +135,7 @@
     <header>
         <h1>ABOUT</h1>
         <nav>
-            <ul class="topnav-centered">
+            <ul class="topnav">
                 <li><a href = "index.html">About</a></li>
                 <li><a href = "schoolprojects.html">School Projects</a></li>
                 <li><a href = "personalprojects.html">Personal Projects</a></li>
