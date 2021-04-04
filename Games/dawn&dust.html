@@ -254,17 +254,6 @@
         body{ 
             background-color: #1f1f1f;       
         }    
-
-        @media screen and (min-width: 320px) {
-            body {
-                font-size: calc(16px + 6 * ((100vw - 320px) / 680));
-             }
-        }
-        @media screen and (min-width: 1000px) {
-            body {
-             font-size: 22px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -336,7 +325,7 @@
     <a href = "https://drive.google.com/file/d/1K5LKHesHuNzjLkF_vmFW5CamD2TAO8XO/view" target="_blank"><img src = "../Icons/Download.svg" alt = "Download Link" id = "Download" class = "centericon"></a>
   </div>
 
-  <div style="white-space: pre; color:whitesmoke; text-align: center;">
+  <div style="white-space: pre; color:whitesmoke; text-align: center; font-size: clamp(16px, 2vw, 22px);">
     Dawn N' Dust is a car battle royale game made in Unreal Engine 
   and written in C++. The concept of the game is very similar to most battle royales 
   where players must fight one another. However, instead of a last person standing 
