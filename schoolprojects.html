@@ -150,15 +150,16 @@
 <body>
     <header>
         <h1>SCHOOL PROJECTS</h1>
-        <nav>
-            <ul class="topnav">
-                <li><a href = "index.html">About</a></li>
-                <li><a href = "schoolprojects.html">School Projects</a></li>
-                <li><a href = "personalprojects.html">Personal Projects</a></li>
-                <li><a href = "contact.html">Contact</a></li>
-                <li><a href = "resume.html">Resume</a></li>
-            </ul>
-        </nav>
+        <div class="topnav" id="JohnsTopNav">
+            <a href = "../index.html">About</a>
+            <a href = "../schoolprojects.html">School Projects</a>
+            <a href = "../personalprojects.html">Personal Projects</a>
+            <a href = "../contact.html">Contact</a>
+            <a href = "../resume.html">Resume</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
     </header>
 
     <div><h2 style="text-align: center">Crescent Revamped</h2> <a href = "Games/crescent.html"><img src = "Pictures/Crescent/Thumbnail.png" alt = "Crescent Revamped" id = "Crescent"></a> </div>
@@ -191,6 +192,17 @@
          $(window).on("load",function(){
              $(".loader-wrapper").fadeOut("slow");
         });
+
+        function myFunction() {
+            var x = document.getElementById("JohnsTopNav");
+             if (x.className === "topnav") {
+                x.className += " responsive";
+            } 
+            
+            else {
+                x.className = "topnav";
+            }
+        } 
     </script>
 </body>
 </html>
