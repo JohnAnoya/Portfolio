@@ -51,12 +51,12 @@
             height: 100%;
         }
 
-        /* Slideshow container for IFrame video */
+        /* Slideshow container */
         .slideshow-container {
+            max-width: 750px;
+            max-width: 500px;
             position: relative;
-            overflow: hidden;
-            width: 100%;
-            padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+            margin: auto;
         }
 
         /* Hide the images by default */
@@ -320,7 +320,7 @@
 
     <!-- Slideshow container -->
     <div class="slideshow-container">
-        <iframe class="responsive-iframe" id = "video"
+        <iframe style="width:100%; height: auto;" id = "video"
         src="https://www.youtube.com/embed/oDeUmgnOp6Y">
         </iframe> 
         
