@@ -41,14 +41,9 @@
 
         * {box-sizing:border-box}
 
-        .video-container{
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-        }
-
         .responsive-iframe{
+            overflow: hidden;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
             position: absolute;
             top: 0;
             left: 0;
@@ -326,11 +321,11 @@
 
     <!-- Slideshow container -->
     <div class="slideshow-container">
-        <div class = "video-container">
+    
             <iframe class = "responsive-iframe" width= "750px" height="500px" id = "video"
                 src="https://www.youtube.com/embed/oDeUmgnOp6Y">
             </iframe> 
-        </div>
+        
         
         
         <div class="mySlides fade">
@@ -455,8 +450,7 @@
         slides[slideIndex-1].style.display = "block";
         dots[slideIndex-1].className += " active";
 
-        if(slideIndex > 1) {vid.src = vid.src; vid.style.display = "none"; 
-                            $(".video-container").children().attr('disabled', 'disabled');}
+        if(slideIndex > 1) {vid.src = vid.src; vid.style.display = "none"; }
         else {vid.style.display = "initial"}
     }
   </script>
