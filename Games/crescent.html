@@ -41,6 +41,20 @@
 
         * {box-sizing:border-box}
 
+        .video-responsive{
+            overflow:hidden;
+            padding-bottom:56.25%;
+            position:relative;
+            height:0;
+        }
+        .video-responsive iframe{
+            left:0;
+            top:0;
+            height:100%;
+            width:100%;
+            position:absolute;
+        }
+
         /* Slideshow container */
         .slideshow-container {
             max-width: 750px;
@@ -309,9 +323,11 @@
 
     <!-- Slideshow container -->
     <div class="slideshow-container">
-        <iframe width= "100%" max-height="100%" id = "video"
-        src="https://www.youtube.com/embed/oDeUmgnOp6Y">
-        </iframe> 
+        <div class="video-responsive">
+            <iframe width= "750" height="500" id = "video"
+                src="https://www.youtube.com/embed/oDeUmgnOp6Y">
+            </iframe> 
+        </div>
         
         <div class="mySlides fade">
     </div>
