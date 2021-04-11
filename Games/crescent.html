@@ -456,7 +456,7 @@
         dots[slideIndex-1].className += " active";
 
         if(slideIndex > 1) {vid.src = vid.src; vid.style.display = "none"; 
-                            $(".video-container").attr('disabled', 'disabled');}
+                            $(".video-container").children().attr('disabled', 'disabled');}
         else {vid.style.display = "initial"}
     }
   </script>
