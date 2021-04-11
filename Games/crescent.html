@@ -41,18 +41,21 @@
 
         * {box-sizing:border-box}
 
-        .video-responsive{
-            overflow:hidden;
-            padding-bottom:56.25%;
-            position:relative;
-            height:0;
+        .video-container{
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
         }
-        .video-responsive iframe{
-            left:0;
-            top:0;
-            height:100%;
-            width:100%;
-            position:absolute;
+
+        .responsive-iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
         }
 
         /* Slideshow container */
@@ -323,10 +326,11 @@
 
     <!-- Slideshow container -->
     <div class="slideshow-container">
-      
-            <iframe class = "video-responsive" width= "750" height="500" id = "video"
+        <div class = "video-container">
+            <iframe class = "responsive-iframe" id = "video"
                 src="https://www.youtube.com/embed/oDeUmgnOp6Y">
             </iframe> 
+        </div>
         
         
         <div class="mySlides fade">
