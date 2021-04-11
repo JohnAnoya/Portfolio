@@ -41,9 +41,14 @@
 
         * {box-sizing:border-box}
 
-        .responsive-iframe{
+        .video-container{
+            position: relative;
             overflow: hidden;
+            width: 100%;
             padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+        }
+
+        .responsive-iframe{
             position: absolute;
             top: 0;
             left: 0;
@@ -321,8 +326,8 @@
 
     <!-- Slideshow container -->
     <div class="slideshow-container">
-    
-            <iframe class = "responsive-iframe" width= "750px" height="500px" id = "video"
+       
+            <iframe width= "100vw" height="56.25vw" id = "video"
                 src="https://www.youtube.com/embed/oDeUmgnOp6Y">
             </iframe> 
         
