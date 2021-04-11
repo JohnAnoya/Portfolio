@@ -352,19 +352,25 @@
   </div>
 
   <pre>
-    Crescent Engine is a custom built OpenGL/Vulkan game engine 
-  written in C++. I wanted to challenge myself a bit more by creating a simple 
-  game engine, so I took the ideas I was learning in my classes and implemented 
-  them into my engine.
-  
-  In the video above, you can see I implemented a variety of features such as
-  the particle emitter, audio system, UI, AI algorithms, camera movement, 
-  and an AWS networking hub similar to GitHub. 
+    The Ubisoft NEXT Programming Challenge is an annual challenge hosted by Ubisoft. 
+  Ubisoft hands out a simple engine API that users must understand before they release 
+  the game theme. Once the game theme has been released, users have 3 days (Friday, 
+  Saturday, and Sunday) to make a game revolved around the theme. The theme for this 
+  year was to create a Tower Defense game.  
 
-  There were also other features I added that were not mentioned in the video. 
-  One of these being the abstract renderer I created that allows me to switch 
-  between different 3D graphics libraries such as OpenGL, Vulkan, DirectX, 
-  etc. (This can be seen in the slide show and on the GitHub repository)
+  For my Tower Defense game I decided to use all of the sprites Ubisoft gave us to make 
+  an endless wave based Tower Defense game. I tried to make the map layout Ubisoft themed 
+  by creating an outline of the Assassin's Creed logo, implemented a variety of enemies/towers, 
+  and a shop where players can buy towers or healing potions. 
+
+  When creating the enemy/tower classes, I utilized polymorphism by making 
+  the variety of enemies and towers inherit from an abstract header class 
+  containing purely virtual functions. For example my enemy classes Dwarf, 
+  BalancedEnemy, and Giant, all inherit from my one Enemy.h class. This way 
+  I can easily and efficiently create new enemies!
+
+  (You can download my submission down below which contains the code, 
+  a technical document, and my resume)
   </pre>
 
   <div class ="contributions">
