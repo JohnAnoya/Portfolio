@@ -3,7 +3,8 @@
 <head>
     <title>Portfolio</title>
     <script src="../jquery-3.5.1.min.js"></script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
@@ -19,21 +20,17 @@
             overflow: hidden;
         }   
 
-        .topnav li {
-            display: inline;
-            float: none;
-            text-align: center;
-            padding: 10px;
-            margin: 0;
-        }
-
-        .topnav li a {
+        .topnav a {
             float: none;
             color: #f2f2f2;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
             font-size: 17px;
+        }
+  
+        .topnav .icon { 
+            display: none;
         }
 
         /* Change the color of links on hover */
@@ -206,14 +203,15 @@
 
         .centericon {
             display: inline-block;         
-            width: 5%;
+            max-width: 100%;
         }
 
         .contributions { 
+            white-space: pre-line;
+            word-wrap: break-word;
+            text-align: center;
             color:whitesmoke;
-            position: fixed;
-            right: 100px; 
-            font-size: 21px;
+            font-size: 5vw;
         }
 
         h1{
@@ -243,29 +241,36 @@
             font-size: 18px; 
         }
 
-        
+        pre {
+            white-space: pre-line;
+            word-wrap: break-word;
+            text-align: center;
+            color: whitesmoke;
+        }
+  
         body, html {
             height: 100%;
+            font-size: 5vw; 
+            background-color: #1f1f1f; 
             text-align: center;
-        }
+        } 
 
-        body{ 
-            background-color: #1f1f1f;       
-        }    
+        
     </style>
 </head>
 <body>
     <header>
         <h1>PROJECTS</h1>
-        <nav>
-            <ul class="topnav">
-                <li><a href = "../index.html">About</a></li>
-                <li><a href = "../schoolprojects.html">School Projects</a></li>
-                <li><a href = "../personalprojects.html">Personal Projects</a></li>
-                <li><a href = "../contact.html">Contact</a></li>
-                <li><a href = "../resume.html">Resume</a></li>
-            </ul>
-        </nav>
+        <div class="topnav" id="JohnsTopNav">
+            <a href = "../index.html">About</a>
+            <a href = "../schoolprojects.html">School Projects</a>
+            <a href = "../personalprojects.html">Personal Projects</a>
+            <a href = "../contact.html">Contact</a>
+            <a href = "../resume.html">Resume</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
     </header>
 
     <h2>Crescent Revamped</h2>
