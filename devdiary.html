@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang = "en-ca">
 <head>
-    <title>John Anoya's Portfolio</title>
+    <title>John Anoya's Portfolio - Diary</title>
     <script src="jquery-3.5.1.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,6 +13,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <style>
+       /* Add a black background color to the top navigation */
         .topnav {
             padding: 25px;
             background-color: #333;
@@ -36,6 +37,14 @@
         .topnav a:hover {
             background-color: #ddd;
             color: black;
+        }
+
+        #canvas {
+            position: absolute;
+            background-color: #3d3d3d;
+            width: 600px;
+            height: 300px;
+             border: 3px solid whitesmoke;
         }
 
         .loader-wrapper {
@@ -118,26 +127,20 @@
             font-size: 38px; 
         }
 
-        h2{
-            color: whitesmoke;
-            text-align: center;
-            font-size: 24px; 
-        }
-
         pre {
             white-space: pre-line;
             word-wrap: break-word;
             text-align: center;
             color: whitesmoke;
         }
-
+  
         body, html {
             height: 100%;
             font-size: 5vw; 
-            text-align: center;
             background-color: #1f1f1f; 
-        }
-
+            text-align: center;
+        } 
+  
         @media screen and (min-width: 1200px) {
              body {
                 font-size: 22px;
@@ -180,7 +183,7 @@
 </head>
 <body>
     <header>
-        <h1>ABOUT ME</h1>
+        <h1>DEVELOPER DIARY</h1>
         <div class="topnav" id="JohnsTopNav">
             <a href = "../index.html">About</a>
             <a href = "../schoolprojects.html">School Projects</a>
@@ -194,39 +197,16 @@
         </div>
     </header>
 
-    <div> 
-        <br>
-        <img src = "Icons/Crescent.svg" alt = "Crescent Moon" style="display: inline;">
-        <h1 style="display: inline;">John Anoya</h1>
-    </div>
-
-    <img src = "Pictures/AboutMe/PictureOfMyself.png" alt = "Picture of Me">
-
     <pre>
-        Hey there! My name is John, and I am a gameplay programmer from 
-    Toronto, Ontario. I have been making games ever since I was 
-    14 and published my first successful game on Roblox when 
-    I was 17. 
-
-    Throughout my portfolio you will be able to see projects 
-    that I’ve personally worked on for school, alongside some 
-    of my side projects. I have a huge passion for learning 
-    so I often find myself constantly trying to learn new 
-    things that are often challenging, while also 
-    continuing to strengthen my current technical 
-    abilities. 
-        
-    My newest hobby is to make small websites 
-    (like this one :D) using HTML, CSS, and 
-    JavaScript.           
+    Coming Soon. 
     </pre>
 
     <div class = "loader-wrapper"> 
         <span class="loader"><span class="loader-inner"></span></span>
     </div>
-
+    
     <script>
-        $(window).on("load",function(){
+       $(window).on("load",function(){
             $(".loader-wrapper").fadeOut("slow");
         });
 
