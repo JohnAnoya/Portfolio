@@ -47,6 +47,19 @@
              border: 3px solid whitesmoke;
         }
 
+        /* Fake image */
+        .diaryimg {
+          background-color: #aaa;
+          width: 100%;
+        }
+
+        /* Add a card effect for articles */
+        .card {
+          background-color: #333;
+          padding: 20px;
+          margin-top: 20px;
+        }
+
         .loader-wrapper {
             width: 100%;
             height: 100%;
@@ -127,6 +140,14 @@
             font-size: 38px; 
         }
 
+        h2{ 
+            color: whitesmoke;
+        }
+
+        h5 {
+            color:whitesmoke;
+        }
+
         pre {
             white-space: pre-line;
             word-wrap: break-word;
@@ -136,6 +157,7 @@
   
         body, html {
             height: 100%;
+            padding: 20px;
             font-size: 5vw; 
             background-color: #1f1f1f; 
             text-align: center;
@@ -143,7 +165,7 @@
   
         @media screen and (min-width: 1200px) {
              body {
-                font-size: 22px;
+                font-size: 20px;
             }
 
             .contributions{ 
@@ -198,8 +220,286 @@
     </header>
 
     <pre>
-    Coming Soon. 
+    More Dev Entries Coming Soon. 
     </pre>
+
+    <div class="card">
+        <h2>Crescent 2D Platformer (Powerup Mechanic)</h2>
+        <h5>Update 10 | April 28th, 2019</h5>
+        <iframe width= "750" height="400" id = "video" allow = "fullscreen;"
+        src="https://www.youtube.com/embed/ZKQeiZK1bhc">
+        </iframe> 
+        <pre>
+            Welcome everyone to the tenth and final mechanic showcase! In this update I will be talking about my powerup mechanic. 
+        So far, I’ve created two types of collectible powerups: the jump power increase power up, and the healthkit power 
+        up. Both power ups are somewhat self explanatory, the jump increase power up increases the player’s jump power 
+        for a set amount of time, while the healthkit power up gives the play an additional 100 health. This mechanic 
+        functions by using a triggered collider to detect whether or not the player is touching the powerups. If the 
+        player is touching the power up then it will all depend on the tag of the power up. Depending on the tag, 
+        it will provide different functionality.
+
+        With all the mechanics I’ve created combined, that comes to a total of ten game mechanics. Here is a list 
+        of what I have created: sprint mechanic, dash-jump mechanic, camera zooming mechanic, crouch mechanic, 
+        puzzle mechanic, enemy mobility mechanic, projectile mechanic, health/status mechanic, checkpoint 
+        mechanic, and power up mechanic. My plans after this final mechanic update is to post a playable 
+        demo that hopefully contains a few new mechanics. This will inline with be wanting to become 
+        a gameplay programming specialist.
+
+        This playable demo will likely be released in about a week or so, stay tuned!        
+        </pre>
+    </div>
+
+    <div class="card">
+        <h2>Crescent 2D Platformer (Checkpoint Mechanic)</h2>
+        <h5>Update 9 | April 21st, 2019</h5>
+        <iframe width= "750" height="400" id = "video" allow = "fullscreen;"
+        src="https://www.youtube.com/embed/NSnqgVDNS1g">
+        </iframe> 
+        <pre>
+            Hello world, it’s currently getting close to the end of the school year for us students! Today, I’ll be showcasing my 
+        checkpoint mechanic. The idea is fairly easy to understand, once the player dies it spawns them in a designated area. 
+        How I accomplished this was by creating a vector3 variable equivalent to the checkpoint’s position and checking to 
+        see if the player collided with the checkpoint. If the player collides with the checkpoint, and the player were to 
+        die, then their position would be set to the vector3 variable and be respawned at the checkpoint.
+
+            
+        
+         As of now, I have programmed nine game mechanics and plan on completing my tenth mechanic fairly soon. 
+         Here are the current game mechanics right now: sprint mechanic, dash-jump mechanic, camera zooming 
+         mechanic, crouch mechanic, puzzle mechanic, enemy mobility mechanic, projectile mechanic, 
+         health/status mechanic, and now a checkpoint mechanic. After this, I will be working on 
+         a powerup mechanic. Creating these mechanics will push me towards my goal of becoming 
+         a gameplay programming specialist.        
+        </pre>
+    </div>
+
+    <div class="card">
+        <h2>Crescent 2D Platformer (Health & Status UI Mechanic)</h2>
+        <h5>Update 8 | April 14th, 2019</h5>
+        <iframe width= "750" height="400" id = "video" allow = "fullscreen;"
+        src="https://www.youtube.com/embed/jEfRvE66x8s">
+        </iframe> 
+        <pre>
+            Hello, this is the eighth game mechanic I’ve created throughout my journey. This mechanic is more associated with the 
+        graphical user interface side of things, so I call it the health/status mechanic. The health/status mechanic is a user 
+        interface that allows the user to keep track of health and status of the character. If a scenario were to ever occur 
+        of the player being low on health, then this mechanic will inform them. This mechanic functions by taking the 
+        player’s health and changing the status of the player depending on how much health they have. The health bar 
+        works by creating a float variable then inside that variable are the size of the health bar’s along the 
+        x-axis then dividing it by the player’s health. The health bar is then rescaled along the x-axis by 
+        taking the player’s health and multiplying it by the float variable, this allows it to be scaled 
+        accordingly.
+
+
+        So far the game mechanics implemented are the sprint mechanic, dash-jump mechanic, camera zooming mechanic, 
+        crouch mechanic, puzzle mechanic, enemy mobility mechanic, projectile mechanic, and now the health/status 
+        mechanic. My ninth mechanic will be a checkpoint mechanic, allowing the player to respawn where they left 
+        off. This will push me towards my goal of becoming a gameplay programming specialist.
+            
+            
+        Moving forward, I will will be programming my next game mechanic. 
+        This should be finished by next week! 
+        </pre>
+    </div>
+
+    <div class="card">
+        <h2>Crescent 2D Platformer (Projectile Mechanic)</h2>
+        <h5>Update 7 | April 12th, 2019</h5>
+        <iframe width= "750" height="400" id = "video" allow = "fullscreen;"
+        src="https://www.youtube.com/embed/70LGaRZfckU">
+        </iframe> 
+        <pre>
+            Hey everybody! This marks game mechanic number 7. For this mechanic specifically I crafted a projectile mechanic that allows me 
+        to shoot projectiles at any form of enemies I have implemented in my game. The process was fairly simple, I created a gameObject 
+        that is attached to the player of where the projectile should spawn, the code then takes that information and proceeds to spawn 
+        in a prefab of the projectile using a function in Unity called instantiate. Once that’s done, it applies a constant force 
+        allowing the projectile to move straight forward and being destroyed on impact or destroyed after a set amount of time.
+
+        I currently have a sprint mechanic, dash-jump mechanic, camera zooming mechanic, crouch mechanic, puzzle mechanic, enemy 
+        mobility mechanic, and a projectile mechanic implemented into my capstone. My next goal will be to work on a 
+        health/status mechanic that will be of significant use to the player. This will inline with be wanting to 
+        become a gameplay programming specialist.
+
+        My next task from here will be completing my eighth game mechanic. I plan on finishing this immediately after 
+        my seventh mechanic has been published.
+        </pre>
+    </div>
+
+    <div class="card">
+        <h2>Crescent 2D Platformer (AI Mechanic)</h2>
+        <h5>Update 6 | April 7th, 2019</h5>
+        <iframe width= "750" height="400" id = "video" allow = "fullscreen;"
+        src="https://www.youtube.com/embed/6J0yV24VGCY">
+        </iframe> 
+        <pre>
+            Hello everyone, this is part 6 of my game mechanic showcase. For my sixth mechanic I decided to program an enemy mobility 
+        or AI mechanic. Essentially the code functions by allowing the enemy to move left and right, checking if the player has 
+        collided with the triggered collider attached to the enemy, damaging the player, and the possibility of jumping to 
+        throw the player off. The overall movement was coded by just applying constant force on the x and y axis, if the 
+        player collided with the trigger attached to the enemy then the enemy is inclined to jump towards the player to 
+        throw them off. The damage portion was more dependant on checking to see if the player collided with the enemy, 
+        if so it randomizes how much damage it should do to the player.
+
+        As of now, I have programmed six game mechanics and plan on reaching ten fairly soon. Here are the current 
+        game mechanics right now: sprint mechanic, dash-jump mechanic, camera zooming mechanic, crouch mechanic, 
+        puzzle mechanic, and now a enemy mobility mechanic. After this, I will be working on a projectile
+        mechanic and a health/status mechanic. The creation of all of these mechanics will push me 
+        towards my goal of becoming a gameplay programming specialist.
+            
+        My responsibility moving forward will be programming my next game mechanic. This should 
+        be finished within the same week! 
+        </pre>
+    </div>
+
+    <div class="card">
+        <h2>Crescent 2D Platformer (Puzzle Mechanic)</h2>
+        <h5>Update 5 | April 4th, 2019</h5>
+        <iframe width= "750" height="400" id = "video" allow = "fullscreen;"
+        src="https://www.youtube.com/embed/4jzTzxpi5KU">
+        </iframe> 
+        <pre>
+            Welcome to part 5 of my capstone mechanics presentation. Part 5 involves me talking about my puzzle mechanic and how it can 
+        play a big role in my game. The approach I tried to take with my puzzle mechanic was to use other mechanics I’ve created 
+        throughout this journey such as the camera zooming mechanic to gather clues for the puzzle. In this scenario, after the 
+        clue is found it is up to the player to decipher the code. Once the code has been deciphered, the player is prompt with 
+        a user interface in which the user is required to input the correct digits to proceed to the next level. To talk a 
+        little bit on how the code works, I have a script attached to the user interface that checks to see if the digits 
+        the player types matches with the initial code I have set up in the script.
+
+        Currently, I have programmed a sprint mechanic, a dash-jump mechanic, a camera zooming mechanic, crouch 
+        mechanic, and a puzzle mechanic. The next thing I’ll be working on is an enemy AI mechanic. This will 
+        push me towards my goal of becoming a gameplay programming specialist.
+            
+        My responsibility moving forward will be coding my sixth game mechanic for my capstone. This should 
+        be around shortly after my fifth game mechanic is published. 
+        </pre>
+    </div>
+
+    <div class="card">
+        <h2>Crescent 2D Platformer (Crouch Mechanic)</h2>
+        <h5>Update 4 | Feb 28th, 2019</h5>
+        <iframe width= "750" height="400" id = "video" allow = "fullscreen;"
+        src="https://www.youtube.com/embed/jMTgpVzni_U">
+        </iframe> 
+        <pre>
+            Sorry for the delay on updates everyone! This additional entry makes part 4 and today I'll be showcasing my crouch mechanic. 
+        The crouch mechanic is required to be used in various parts of the game and revolves around swiftly moving from one end to 
+        another, I took a lot inspiration from a game called Splatoon. Surprisingly enough, this didn't require any difficult 
+        procedures to accomplish this, more so utilizing animations, and colliders. In regards to how the crouch mechanic 
+        works, I simply made it so that whenever the CTRL key on the keyboard is pressed, the player's collider is swapped 
+        out with a smaller one and the animation is set to the crouch animation I created. This makes it look and 
+        feel like the player is swimming smoothly underneath fences.
+
+        I’ve currently programmed a sprint mechanic, a dash-jump mechanic, a camera zooming mechanic, and now a crouch 
+        mechanic. Moving forward, I’ll be working on the puzzle mechanic, enemy AI, and improving anything else I’ve 
+        created as of yet. This will inline with be wanting to become a gameplay programming specialist.
+
+        My next task from here will be completing my fifth game mechanic. I plan on finishing this immediately after 
+        my fourth mechanic is published.
+        </pre>
+    </div>
+
+    <div class="card">
+        <h2>Crescent 2D Platformer (Camera Zoom Mechanic)</h2>
+        <h5>Update 3 | Feb 21st, 2019</h5>
+        <iframe width= "750" height="400" id = "video" allow = "fullscreen;"
+        src="https://www.youtube.com/embed/4ApBofK7Wms">
+        </iframe> 
+        <pre>
+            What’s up everybody, this entry will make part 3 for my game mechanic series. This week I’ll be showcasing 
+        my camera zooming mechanic. The concept is that the player will have the ability to zoom in and out of the 
+        game in order to complete the set-out puzzle mechanics placed inside of Crescent. To summarize how I’m 
+        getting the camera to do this, I’m essentially just scaling the orthographic size by however long the 
+        player is holding down the Q or E key on their keyboard causing it to either zoom in or out. The 
+        camera also offsets a bit upwards so you can see what’s above you, this done by setting the 
+        camera’s x, y, z coordinates to wherever the camera is currently placed in-game and adding 
+        or subtracting a value of 2.25 to the y-axis depending if the player is zooming in or out.
+
+        As of yet, I’ve programmed a sprint mechanic, a dash-jump mechanic, and now a camera 
+        zooming mechanic. Moving forward, I’ll be working on a crouching and puzzle mechanic, 
+        and improving anything else I’ve created along the way. This will inline with be 
+        wanting to become a gameplay programming specialist.
+
+        My next task from here will be completing my fourth game mechanic. I plan on 
+        finishing this during the fourth week since posting my first game mechanic.
+        </pre>
+    </div>
+
+    <div class="card">
+        <h2>Crescent 2D Platformer (Jump-Dash Mechanic)</h2>
+        <h5>Update 2 | Feb 14th, 2019</h5>
+        <iframe width= "750" height="400" id = "video" allow = "fullscreen;"
+        src="https://www.youtube.com/embed/VkSr3QRb6ak">
+        </iframe> 
+        <pre>
+            Hello everyone, welcome to my second game mechanic showcase. This week I’ve created a jump-dash mechanic! 
+        The concept of my jump-dash mechanic is to reach a far distance and high placed platform efficiently, 
+        this goal was accomplished using vectors. Whenever the player hits the F key on their keyboard, the 
+        code creates a new vector and takes the player’s x and y coordinates, so the player isn’t offset 
+        somewhere random in the game. I then add or subtract an additional 10 units to the x coordinate 
+        depending on where the player is moving and if the player is jumping, creating a jump-dash.
+
+        So far, I’ve programmed the sprint mechanic, and now the dash-jump mechanic. Moving forward, 
+        I’ll be working on a camera mechanic, and improving anything else I’ve created along the way. 
+        This will inline with be wanting to become a gameplay programming specialist.
+
+        My next task from here will be completing my third game mechanic. I plan on 
+        finishing this during the third week since posting my first game mechanic.
+        </pre>
+    </div>
+
+    <div class="card">
+        <h2>Crescent 2D Platformer (Sprint Mechanic)</h2>
+        <h5>Update 1 | Feb 7th, 2019</h5>
+        <iframe width= "750" height="400" id = "video" allow = "fullscreen;"
+        src="https://www.youtube.com/embed/hX9vvkTfkjg">
+        </iframe> 
+        <pre>
+            Hey everyone, I’m ready to showcase the first of my many game mechanics I’ve worked on this college semester. 
+        The first mechanic I’m showcasing here is a sprint mechanic, a very simple mechanic to start things off. However, 
+        I guarantee the mechanics will get more complex from here on out. The concept of the sprint mechanic is that 
+        whenever the player holds the shift key on their keyboard, the character in-game will accelerate at a faster 
+        speed than usual. I also included a release method so whenever the player releases the shift key, the 
+        character reverts to regular speed. The overall purpose of the sprint mechanic is to maneuver around 
+        the map at a faster pace, this can be helpful if a map is gigantic.
+
+        So far, I’ve only programmed the sprint mechanic. Moving forward, I’ll be working on a jump-dash mechanic, 
+        camera mechanic, and improving my sprint mechanic or animations if needed. This will inline with be wanting 
+        to become a gameplay programming specialist.
+
+        My next task will be completing my second game mechanic. I plan on finishing this next week 
+        since posting this sprint mechanic.
+        </pre>
+    </div>
+
+    <div class="card">
+        <h2>Global Game Jam 2019</h2>
+        <h5>Jan 28th, 2019</h5>
+        <iframe width= "750" height="400" id = "video" allow = "fullscreen;"
+        src="https://www.youtube.com/embed/nJq2VSzvdQw">
+        </iframe> 
+        <pre>
+            Hey everyone, I recently attended the Global Game Jam 2019 and it was a blast! Our team came 
+        out with a platformer called Familiar Relief. The concept is that the game starts off very difficult 
+        and progressively gets easier, we did this to correspond with the theme: “What does home mean to 
+        you?”. Our mindset was that whenever someone goes home, they gain a sense of relief, so we tried 
+        implementing that into the game. To do this, not only did we make the game challenging towards 
+        the beginning, but the art style also changes from simplistic to detailed illustrations; 
+        once the game is complete from start to finish you gain a sense of relief, 
+        just like going home.
+
+        We also implemented quite a few mechanics that made the game difficult to complete. 
+        These range from falling blocks to spikes. The falling blocks look just like normal 
+        blocks, but once a player touches the block, the block immediately falls and takes 
+        the player with it too (we are just subtracting from the block’s y-axis for it to 
+        fall like it does [we also use the game engine’s implemented physics to give the 
+        block cool rotation effects]). The spikes get triggered once the player collides 
+        with the spike’s collider, this causes the player to instantly die and restart 
+        from the start of a specific level. 
+        </pre>
+    </div>
+
+    <br>
 
     <div class = "loader-wrapper"> 
         <span class="loader"><span class="loader-inner"></span></span>
