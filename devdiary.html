@@ -225,6 +225,185 @@
     </pre>
 
     <div class="card">
+        <h2>Crescent 2D Revamped</h2>
+        <h5>Update 5 | Dec 1st, 2019</h5>
+        <iframe width= "100%" height="auto" id = "video" allow = "fullscreen;"
+        src="https://www.youtube.com/embed/FYG8wlbQwo8">
+        </iframe> 
+
+        <pre>
+        Introduction:
+
+        Hey everyone, welcome back to update 5 for Crescent 2D! Alex and I managed to implement a majority of our objectives this week. 
+        These objectives being the completion of level 2, implementation of projectile enemies, a game title screen, enemy health 
+        drops, and a playable demo. We also learned a lot from our midstone showcase and will be improving our tutorial level 
+        immensely in the coming weeks!
+            
+        Code:
+            
+        I will briefly go over the projectile enemy functionality. The projectile enemies moves and attack purely based on 
+        randomization. They follow the player with a slight offset in position; the enemies are never overlapping with the 
+        player, they keep at a certain distance and attack when intended.
+            
+        I go more in-depth with all of these mechanics in my YouTube video.
+            
+        Retrospective:
+            
+        Personally, I learned a lot about how people play our game. During our prototype showcase, I discovered that 
+        our tutorial level could use a lot more work. The tutorial was not practical enough in many instances; 
+        Crescent’s tutorial revolves around showing and not actually doing what is being shown. We had the 
+        controls up on the screen during the tutorial level and realized that a lot of people had already 
+        forgotten about them by the time they reach level 1.
+            
+        The biggest mishap would definitely be the lack of examples of how to use Crescent in the 
+        tutorial level. It left many wondering what Crescent’s purpose was in the game to begin 
+        with.       
+        </pre>
+
+        <a href = "https://www.linkedin.com/in/alexander-dispenza-920226175/" target="_blank">(Alexander's LinkedIn)</a>
+        <a href = "https://github.com/CrescentLua/Crescent2DRepository" target="_blank">(Source Code)</a>
+        <a href = "https://drive.google.com/file/d/1esONhnD3VfN0EWRP_1Lv4K220XCC6oH_/view?usp=sharing" target="_blank">(Download)</a>
+    </div>
+
+    <div class="card">
+        <h2>Crescent 2D Revamped</h2>
+        <h5>Update 4 | Nov 14th, 2019</h5>
+        <iframe width= "100%" height="auto" id = "video" allow = "fullscreen;"
+        src="https://www.youtube.com/embed/SL5RCJSxn4M">
+        </iframe> 
+
+        <pre>
+        Introduction:
+
+        Update 4 for Crescent Revamped consists of user interface implementation. We have managed to create a variety of user interfaces 
+        ranging from a player's health bar, enemy health bars, death interface, and even introduced a monologue panel while we were 
+        at it.
+            
+        Code:
+            
+        So to briefly talk about the code, all the user interfaces use what is called a Canvas and contain interface materials 
+        ranging from buttons, text, and images. The health bars work by taking an image and converting it to a filled type. 
+        Through that we are able to calculate the image’s fill amount and provide a functional health interface. If you 
+        prefer a more in-depth explanation of how the health interfaces and monologue system works, I provide such 
+        information in the video linked below.
+            
+        Crescent Playtesting:
+            
+        Last week we prepared our very first playtesting sessions for Crescent. Personally, I wanted to know if the 
+        tutorial level was easy to find and if the controls were reliable. Through two play test sessions Alex 
+        and I have come to the conclusion that the tutorial level was fairly difficult to find without the 
+        assistance of user interface.
+            
+        On top of this, I noticed that the button detection when it came to interacting with certain objects 
+        or levels was really inconsistent; it would take multiple button presses to trigger these events 
+        at times. Hopefully with this recent patch the tutorial level is easier to find. However, we do 
+        plan on fixing the inconsistency when it comes to button pressing for interactions, along with 
+        implementing level 2 & 3, and publicly releasing a download to play the game. This will inline 
+        with my goal of becoming a gameplay programmer or graphics programming specialist.            
+        </pre>
+
+        <a href = "https://www.linkedin.com/in/alexander-dispenza-920226175/" target="_blank">(Alexander's LinkedIn)</a>
+        <a href = "https://github.com/CrescentLua/Crescent2DRepository" target="_blank">(Source Code)</a>
+    </div>
+
+    <div class="card">
+        <h2>Crescent 2D Revamped</h2>
+        <h5>Update 3 | Oct 21st, 2019</h5>
+        <iframe width= "100%" height="auto" id = "video" allow = "fullscreen;"
+        src="https://www.youtube.com/embed/0mCkHem2xoA">
+        </iframe> 
+
+        <pre>
+            Welcome to the third update of Crescent revamped. This week, Alex and I managed to fulfill a lot of tasks that were expected 
+            in last week’s update. This week’s patch includes a tutorial level, parry projectile system, a variety of power ups, camera 
+            shake functionality, and a jump-dash mechanic that was in the previous prototype!
+
+            Let’s begin by talking about how the parry system works with projectiles. We created an empty game object inside the 
+            player, called it sword and attached a box collider to the empty game object. The script then checks when the 
+            collider on the sword and the collider on the projectile are colliding. To do this, we use a method called 
+            OnTriggerEnter2D and set all the projectiles to have a specific tag to ensure the player is truly hitting 
+            a projectile. The crescent power up allows the player to manually control crescent and its light. We did 
+            this by using boolean variables. So if we had a variable called player_movement that was set to false 
+            then the player would not be able to move. Immediately after this, we set another boolean variable to 
+            true which allows crescent to move instead. We did this in hopes that the player uses crescent’s 
+            light and movement to find clues hidden in the dark.
+            
+            In the next update, we hope to finally implement some form of user interface, finish off building level 2, 
+            begin working on level 3 and 4, and begin adding in additional enemies or player attack combos. On top of 
+            this, we are planning on getting some feedback from play testers and releasing a playable demo to the 
+            public. Pushing out these future updates will correspond with my goal of becoming a gameplay 
+            programmer or graphics programming specialist.
+        </pre>
+
+        <a href = "https://www.linkedin.com/in/alexander-dispenza-920226175/" target="_blank">(Alexander's LinkedIn)</a>
+        <a href = "https://github.com/CrescentLua/Crescent2DRepository" target="_blank">(Source Code)</a>
+    </div>
+
+    <div class="card">
+        <h2>Crescent 2D Revamped</h2>
+        <h5>Update 2 | Oct 7th, 2019</h5>
+        <iframe width= "100%" height="auto" id = "video" allow = "fullscreen;"
+        src="https://www.youtube.com/embed/hwnOE6CufTY">
+        </iframe> 
+
+        <pre>
+            Hey everyone, welcome to the second update of Crescent revamped. This week, we finished building level one, implemented 
+        enemy AI functionality, enemy AI animations, player attack animations, and level selection.
+
+        To speak more upon the implementation of enemy AI, we used a couple float variables such as distance, height, and range. 
+        Distance allowed us to determine how far or close the enemy was to the player by subtracting their positions along the 
+        x-axis. The range variable works together with the distance variable to determine when the enemy should begin 
+        following the player. For example, if the range variable was set to 25 & -25 and the distance went below that 
+        value, then the enemy would begin following the player. The reasoning behind the positive and negative number 
+        is based on left and right directions; the enemy would begin following the left side if the distance went 
+        below 25, while if the distance went below -25 the enemy would begin following the player on the right 
+        side. As for the height variable, we subtract the player’s position along the y-axis with the enemy’s 
+        position along the y-axis. We use this to determine if the player goes beyond the enemy’s height. If 
+        the player goes beyond the enemy’s height, then the enemy begins to jump to catch up to the player.
+            
+        In the coming weeks, we plan on implementing user interface, more level creations, additional 
+        enemies, player attacks or combos, and camera effects. Releasing these new updates will 
+        correspond with my goal of becoming a gameplay programmer or graphics programming 
+        specialist.
+        </pre>
+
+        <a href = "https://www.linkedin.com/in/alexander-dispenza-920226175/" target="_blank">(Alexander's LinkedIn)</a>
+        <a href = "https://github.com/CrescentLua/Crescent2DRepository" target="_blank">(Source Code)</a>
+    </div>
+
+
+    <div class="card">
+        <h2>Crescent 2D Revamped</h2>
+        <h5>Update 1 | Sept 28th, 2019</h5>
+        <iframe width= "100%" height="auto" id = "video" allow = "fullscreen;"
+        src="https://www.youtube.com/embed/uvC3Ide8ZXQ">
+        </iframe> 
+
+        <pre>
+            Hello everyone, I will be starting off this new school semester with a revamp of Crescent 2D! I would like to announce 
+        that I am partnering up with my friend Alexander Dispenza, who previously worked on one of his own projects called Light 
+        Leads The Way. These first few weeks have consisted of coming up with ways to make game creation a lot more 
+        efficient, while also figuring out ways of merging the two projects together. However, this particular 
+        update will be more focused on the revamping stages, so I will be explaining our use for tilemaps, 
+        and the way we changed up the camera’s functionality.
+
+        So far, the mechanics or features we have to showcase are the tilemaps and camera. Tilemaps allow us to create 
+        levels or maps a lot more efficiently. Instead of manually placing block by block, we can smoothly paint our 
+        levels! As for the camera, I programmed the camera to follow the player, rather than placing the camera 
+        inside of the character to simulate a similar motion. This allows us to include camera effects such 
+        as shaking or bouncing. If I had tried creating a shaking or bouncing motion with the previous 
+        camera, the character would shake or bounce along with it; displaying a visual bug or glitch.
+
+        After this initial post, we plan on creating multiple levels using tilemaps, adding enemy AI, player 
+        attacks, and additional character animations. Pushing these new updates out will coincide with my 
+        goal of becoming a gameplay programmer or graphics programming specialist.           
+        </pre>
+
+        <a href = "https://www.linkedin.com/in/alexander-dispenza-920226175/" target="_blank">(Alexander's LinkedIn)</a>
+        <a href = "https://github.com/CrescentLua/Crescent2DRepository" target="_blank">(Source Code)</a>
+    </div>
+
+    <div class="card">
         <h2>Crescent 2D Platformer (Prototype)</h2>
         <h5>Showcase | May 1st, 2019</h5>
         <iframe width= "100%" height="auto" id = "video" allow = "fullscreen;"
